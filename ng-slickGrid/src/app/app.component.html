@@ -1,0 +1,11 @@
+<div class="container">
+  <button (click)="hideMultiHeader()">
+    Delete multi header
+  </button>
+  <button (click)="showMultiHeader()">
+    Create multi header
+  </button>
+  <angular-slickgrid gridId="grid1" [columnDefinitions]="columnDefinitions" [gridOptions]="gridOptions"
+    [dataset]="dataset" (onAngularGridCreated)="angularGridReady($event)">
+  </angular-slickgrid>
+</div>
