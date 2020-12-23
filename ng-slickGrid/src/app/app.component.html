@@ -1,9 +1,9 @@
 <div class="container">
-  <button (click)="hideMultiHeader()">
-    Delete multi header
+  <button (click)="hideMultiHeader()" class="btn btn-danger">
+    Hide multi header
   </button>
-  <button (click)="showMultiHeader()">
-    Create multi header
+  <button (click)="showMultiHeader()" class="btn btn-primary">
+    Show multi header
   </button>
   <angular-slickgrid gridId="grid1" [columnDefinitions]="columnDefinitions" [gridOptions]="gridOptions"
     [dataset]="dataset" (onAngularGridCreated)="angularGridReady($event)">

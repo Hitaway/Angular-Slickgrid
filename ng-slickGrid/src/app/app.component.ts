@@ -27,11 +27,33 @@ export class AppComponent implements OnInit {
       { id: 'finish', name: 'Finish', field: 'finish' },
       { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', sortable: true }
     ];
+
+    // Set multiple buttons on the first column to demonstrate overflow.
+    this.columnDefinitions[0].name = 'Resize me!';
+    this.columnDefinitions[0].header = {
+      buttons: [
+        {
+          // cssClass: 'fa fa-info-circle',
+          image: '../assets/icons/info-icon.png',
+          tooltip: 'Info'
+        },
+        {
+          cssClass: 'fa fa-question-circle',
+          tooltip: 'Help',
+          handler: (e) => {
+            alert('Help');
+          }
+        }
+      ]
+    };
+
     this.gridOptions = {
       enableCellNavigation: true,
       showPreHeaderPanel: true,
       createPreHeaderPanel: true,
-      preHeaderPanelHeight: 35
+      preHeaderPanelHeight: 35,
+      enableHeaderButton: true,
+      enableHeaderMenu: false
     };
 
     // fill the dataset with your data
